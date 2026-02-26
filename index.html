@@ -7,51 +7,51 @@
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: #0b1c2d;
-    color: #eaf2ff;
+    background: #fff5fa;
+    color: #333;
     text-align: center;
 }
 
 h1 {
-    color: #6fb6ff;
+    color: #e83e8c;
     margin-top: 25px;
 }
 
-#busca {
+input {
     padding: 10px;
     width: 260px;
-    border-radius: 8px;
-    border: none;
+    border-radius: 20px;
+    border: 1px solid #e83e8c;
     margin-top: 15px;
     outline: none;
 }
 
 button {
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 10px 25px;
+    border-radius: 20px;
     border: none;
-    background: #1f6fff;
+    background: #e83e8c;
     color: white;
     cursor: pointer;
     margin-left: 5px;
 }
 
 button:hover {
-    background: #3b86ff;
+    background: #d63384;
 }
 
 .adm {
-    background: #132c45;
+    background: #ffffff;
     margin: 15px auto;
     padding: 15px;
     width: 360px;
-    border-radius: 12px;
-    border: 1px solid #6fb6ff;
+    border-radius: 15px;
+    border: 1px solid #e83e8c;
     display: none;
 }
 
 .adm b {
-    color: #9fd0ff;
+    color: #e83e8c;
 }
 </style>
 </head>
@@ -61,24 +61,17 @@ button:hover {
 <h1>Sistema de Fichas Integradas (SFI)</h1>
 
 <!-- PESQUISA -->
-<input type="text" id="busca" placeholder="Digite nome ou nick">
-<button onclick="buscarADM()">Buscar ADM</button>
+<input type="text" id="busca" placeholder="Pesquisar ADM por nome ou nick">
+<button onclick="buscarADM()">Buscar Administrador</button>
 
 <!-- ADM 1 -->
 <div class="adm" data-nome="rafael" data-nick="rafaelgostoso12">
-    <b>Nome:</b> Rafael<br>
+    <b>Nome:</b> Rafael Rodrigues<br>
     <b>Nick:</b> RafaelGostoso12<br>
     <b>Cargo:</b> Fundador
 </div>
 
 <!-- ADM 2 -->
-<div class="adm" data-nome="joao" data-nick="joaoadm">
-    <b>Nome:</b> João<br>
-    <b>Nick:</b> JoaoADM<br>
-    <b>Cargo:</b> Administrador
-</div>
-
-<!-- ADM 3 -->
 <div class="adm" data-nome="joao santos da silva" data-nick="bistecone1">
     <b>Nome:</b> João Santos da Silva<br>
     <b>Nick:</b> bistecone1<br>
