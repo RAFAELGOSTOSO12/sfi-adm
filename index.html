@@ -1,39 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Painel de Administradores</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b1c2d; /* azul marinho suave */
-            color: #eaf2ff;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<title>Painel Administrativo</title>
 
-        h1 {
-            color: #6fb6ff;
-            margin-top: 30px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #0b1c2d, #081420);
+    color: #eaf2ff;
+}
 
-        .adm {
-            background: #132c45;
-            margin: 15px auto;
-            padding: 15px;
-            width: 340px;
-            border-radius: 12px;
-            border: 1px solid #6fb6ff;
-            box-shadow: 0 0 10px rgba(111,182,255,0.2);
-        }
+header {
+    padding: 25px;
+    text-align: center;
+    background: #081a2f;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
 
-        .adm b {
-            color: #9fd0ff;
-        }
-    </style>
+header h1 {
+    margin: 0;
+    color: #6fb6ff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.adm {
+    background: #132c45;
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid #6fb6ff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    transition: transform 0.2s;
+}
+
+.adm:hover {
+    transform: translateY(-5px);
+}
+
+.adm b {
+    color: #9fd0ff;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #6fb6ff;
+    font-size: 14px;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Equipe Administrativa</h1>
+<header>
+    <h1>Equipe Administrativa</h1>
+</header>
+
+<div class="container">
 
 <div class="adm">
     <b>Nome:</b> Rafael<br>
@@ -51,6 +83,19 @@
     <b>Nome:</b> João Santos da Silva<br>
     <b>Nick:</b> bistecone1<br>
     <b>Cargo:</b> ADM 3
+</div>
+
+<!-- ADICIONE MAIS ADM AQUI -->
+<div class="adm">
+    <b>Nome:</b> Lucas Pereira<br>
+    <b>Nick:</b> lucas_admin<br>
+    <b>Cargo:</b> ADM 2
+</div>
+
+</div>
+
+<div class="footer">
+    Sistema SFI • Painel Administrativo
 </div>
 
 </body>
