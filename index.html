@@ -1,43 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>SFI - Administradores</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Painel de Administradores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1c2d; /* azul marinho suave */
+            color: #eaf2ff;
+            text-align: center;
+        }
+
+        h1 {
+            color: #6fb6ff;
+            margin-top: 30px;
+        }
+
+        .adm {
+            background: #132c45;
+            margin: 15px auto;
+            padding: 15px;
+            width: 340px;
+            border-radius: 12px;
+            border: 1px solid #6fb6ff;
+            box-shadow: 0 0 10px rgba(111,182,255,0.2);
+        }
+
+        .adm b {
+            color: #9fd0ff;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<h1>Equipe Administrativa</h1>
 
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 Buscar administrador">
-    <button onclick="buscarADM()">Buscar Administrador</button>
-  </div>
-
-  <div id="resultado" class="card hidden">
-    <h3>Ficha do Administrador</h3>
-
-    <p><strong>Nome:</strong> <span id="nome"></span></p>
-    <p><strong>Registro:</strong> <span id="registro"></span></p>
-    <p><strong>Cargo:</strong> <span id="cargo"></span></p>
-    <p><strong>Nick:</strong> <span id="nick"></span></p>
-    <p><strong>Horas:</strong> <span id="horas"></span></p>
-    <p><strong>Advertências:</strong> <span id="advertencias"></span></p>
-    <p><strong>Frequência:</strong> <span id="frequencia"></span></p>
-    <p><strong>Faixa Etária:</strong> <span id="faixa"></span></p>
-    <p><strong>Data Matrícula:</strong> <span id="data"></span></p>
-    <p><strong>E-mail:</strong> <span id="email"></span></p>
-    <p><strong>ID Matrícula:</strong> <span id="matricula"></span></p>
-    <p><strong>Participação:</strong> <span id="participacao"></span></p>
-
-    <div class="obs">
-      <strong>Observações:</strong>
-      <p id="observacoes"></p>
-    </div>
-  </div>
-
+<div class="adm">
+    <b>Nome:</b> Rafael<br>
+    <b>Nick:</b> RafaelGostoso12<br>
+    <b>Cargo:</b> Fundador
 </div>
 
-<script src="script.js"></script>
+<div class="adm">
+    <b>Nome:</b> João<br>
+    <b>Nick:</b> JoaoADM<br>
+    <b>Cargo:</b> Administrador
+</div>
+
+<div class="adm">
+    <b>Nome:</b> João Santos da Silva<br>
+    <b>Nick:</b> bistecone1<br>
+    <b>Cargo:</b> ADM 3
+</div>
+
 </body>
 </html>
