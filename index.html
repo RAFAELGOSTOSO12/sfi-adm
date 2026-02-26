@@ -2,56 +2,57 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>SFI - Consulta de ADM</title>
+<title>SFI - Pesquisa de ADM</title>
 
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: #fff5fa;
-    color: #333;
+    background: #0f172a;
+    color: #e5e7eb;
     text-align: center;
 }
 
 h1 {
-    color: #e83e8c;
+    color: #38bdf8;
     margin-top: 25px;
 }
 
 input {
     padding: 10px;
     width: 260px;
-    border-radius: 20px;
-    border: 1px solid #e83e8c;
+    border-radius: 10px;
+    border: none;
     margin-top: 15px;
     outline: none;
 }
 
 button {
-    padding: 10px 25px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    border-radius: 10px;
     border: none;
-    background: #e83e8c;
-    color: white;
+    background: #38bdf8;
+    color: #020617;
     cursor: pointer;
     margin-left: 5px;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #d63384;
+    background: #0ea5e9;
 }
 
 .adm {
-    background: #ffffff;
+    background: #020617;
     margin: 15px auto;
     padding: 15px;
     width: 360px;
-    border-radius: 15px;
-    border: 1px solid #e83e8c;
+    border-radius: 12px;
+    border: 1px solid #38bdf8;
     display: none;
 }
 
 .adm b {
-    color: #e83e8c;
+    color: #38bdf8;
 }
 </style>
 </head>
@@ -61,17 +62,10 @@ button:hover {
 <h1>Sistema de Fichas Integradas (SFI)</h1>
 
 <!-- PESQUISA -->
-<input type="text" id="busca" placeholder="Pesquisar ADM por nome ou nick">
-<button onclick="buscarADM()">Buscar Administrador</button>
+<input type="text" id="busca" placeholder="Pesquisar ADM (nome ou nick)">
+<button onclick="buscarADM()">Buscar</button>
 
-<!-- ADM 1 -->
-<div class="adm" data-nome="rafael" data-nick="rafaelgostoso12">
-    <b>Nome:</b> Rafael Rodrigues<br>
-    <b>Nick:</b> RafaelGostoso12<br>
-    <b>Cargo:</b> Fundador
-</div>
-
-<!-- ADM 2 -->
+<!-- ADM -->
 <div class="adm" data-nome="joao santos da silva" data-nick="bistecone1">
     <b>Nome:</b> João Santos da Silva<br>
     <b>Nick:</b> bistecone1<br>
