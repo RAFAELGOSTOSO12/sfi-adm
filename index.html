@@ -2,101 +2,105 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Painel Administrativo</title>
+<title>Painel ADM - SFI</title>
 
 <style>
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #0b1c2d, #081420);
+    background: #0b1c2d;
     color: #eaf2ff;
-}
-
-header {
-    padding: 25px;
     text-align: center;
-    background: #081a2f;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
-header h1 {
-    margin: 0;
+h1 {
     color: #6fb6ff;
+    margin-top: 25px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+input {
     padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    border-radius: 8px;
+    border: none;
+    background: #1f6fff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3b86ff;
 }
 
 .adm {
     background: #132c45;
-    border-radius: 14px;
-    padding: 18px;
+    margin: 15px auto;
+    padding: 15px;
+    width: 350px;
+    border-radius: 12px;
     border: 1px solid #6fb6ff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
-    transition: transform 0.2s;
-}
-
-.adm:hover {
-    transform: translateY(-5px);
+    display: none;
 }
 
 .adm b {
     color: #9fd0ff;
-}
-
-.footer {
-    text-align: center;
-    padding: 15px;
-    color: #6fb6ff;
-    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Equipe Administrativa</h1>
-</header>
+<h1>Sistema de Fichas Integradas (SFI)</h1>
 
-<div class="container">
+<input type="text" id="busca" placeholder="Digite nome ou nick">
+<button onclick="buscarADM()">Buscar ADM</button>
 
-<div class="adm">
+<!-- ADM 1 -->
+<div class="adm" data-nome="rafael" data-nick="rafaelgostoso12">
     <b>Nome:</b> Rafael<br>
     <b>Nick:</b> RafaelGostoso12<br>
     <b>Cargo:</b> Fundador
 </div>
 
-<div class="adm">
+<!-- ADM 2 -->
+<div class="adm" data-nome="joão" data-nick="joaoadm">
     <b>Nome:</b> João<br>
     <b>Nick:</b> JoaoADM<br>
     <b>Cargo:</b> Administrador
 </div>
 
-<div class="adm">
+<!-- ADM 3 -->
+<div class="adm" data-nome="joão santos da silva" data-nick="bistecone1">
     <b>Nome:</b> João Santos da Silva<br>
     <b>Nick:</b> bistecone1<br>
     <b>Cargo:</b> ADM 3
 </div>
 
-<!-- ADICIONE MAIS ADM AQUI -->
-<div class="adm">
-    <b>Nome:</b> Lucas Pereira<br>
-    <b>Nick:</b> lucas_admin<br>
-    <b>Cargo:</b> ADM 2
-</div>
+<script>
+function buscarADM() {
+    let texto = document.getElementById("busca").value.toLowerCase();
+    let adms = document.querySelectorAll(".adm");
 
-</div>
+    adms.forEach(adm => {
+        let nome = adm.getAttribute("data-nome");
+        let nick = adm.getAttribute("data-nick");
 
-<div class="footer">
-    Sistema SFI • Painel Administrativo
-</div>
+        if (nome.includes(texto) || nick.includes(texto)) {
+            adm.style.display = "block";
+        } else {
+            adm.style.display = "none";
+        }
+    });
+}
+</script>
 
 </body>
 </html>
